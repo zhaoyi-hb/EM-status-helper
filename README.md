@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="docs/icon.png" width="96" alt="em-helper" />
+
 # 📮 EM Status Helper
 
 **Editorial Manager 论文状态自动检测 · Chrome / Edge 扩展**
@@ -10,6 +12,10 @@
 <img src="https://img.shields.io/badge/Manifest-V3-2d6cdf" />
 <img src="https://img.shields.io/badge/Chrome%20%7C%20Edge-supported-137333" />
 <img src="https://img.shields.io/badge/隐私-零上传-b06000" />
+
+<br/><br/>
+
+<img src="docs/screenshot.png" width="360" alt="em-helper 界面预览" />
 
 </div>
 
