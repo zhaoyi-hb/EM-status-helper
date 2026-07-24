@@ -1,0 +1,15 @@
+# 系统 / 编辑器
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
+
+# 临时 / 预览文件
+preview.html
+*.log
+*.tmp
+
+# 依赖（如果以后引入）
+node_modules/

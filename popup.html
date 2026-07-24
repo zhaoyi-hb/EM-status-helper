@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <img src="icons/icon48.png" alt="" class="logo" />
+        <div>
+          <div class="brand-title">em-helper</div>
+          <div class="brand-sub">论文状态检测</div>
+        </div>
+      </div>
+      <div class="actions">
+        <button id="gear" class="icon-btn" title="设置">⚙</button>
+        <button id="checkNow" class="btn-primary">立即检测</button>
+      </div>
+    </header>
+
+    <div id="statusBar" class="statusbar"></div>
+
+    <main>
+      <section>
+        <h2 class="section-title">在审稿件 <span id="subCount" class="count"></span></h2>
+        <div id="submissions" class="cards">
+          <div class="empty">尚未检测。</div>
+        </div>
+      </section>
+
+      <details class="panel" id="historyPanel">
+        <summary>变化历史</summary>
+        <div id="history" class="history"><div class="empty">暂无。</div></div>
+      </details>
+    </main>
+
+    <!-- 设置浮层：固定在顶部，不占内容流 -->
+    <div id="settingsOverlay" class="overlay hidden">
+      <div class="overlay-panel">
+        <div class="overlay-head">
+          <span>设置</span>
+          <button id="settingsClose" class="icon-btn" title="关闭">✕</button>
+        </div>
+        <div class="panel-body">
+          <label class="field-label">监控页面 URL</label>
+          <div class="row">
+            <input id="urlInput" type="text" placeholder="EM 主菜单 URL" />
+            <button id="capture" class="btn-ghost" title="使用当前标签页 URL">当前页</button>
+            <button id="add" class="btn-ghost">添加</button>
+          </div>
+          <ul id="urlList" class="url-list"></ul>
+
+          <label class="field-label">检测间隔</label>
+          <div class="row">
+            <input id="interval" type="number" min="1" step="1" class="num" />
+            <span class="unit">分钟</span>
+            <button id="saveInterval" class="btn-ghost">保存</button>
+          </div>
+          <p class="hint">
+            登录 EM 后，用「当前页」抓取作者主菜单 URL 再「添加」。插件会自动跟进
+            Revisions Being Processed 等在审文件夹，跳过已完成的稿件。
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

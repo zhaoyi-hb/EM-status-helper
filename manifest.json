@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "em-helper",
+  "version": "1.0.0",
+  "description": "定时后台检测 Editorial Manager 上论文的审稿状态，状态变化时发送桌面通知。",
+  "permissions": ["alarms", "notifications", "storage", "offscreen", "tabs"],
+  "host_permissions": ["https://*.editorialmanager.com/*"],
+  "background": { "service_worker": "background.js" },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "EM 状态检测",
+    "default_icon": { "16": "icons/icon16.png", "48": "icons/icon48.png", "128": "icons/icon128.png" }
+  },
+  "icons": { "16": "icons/icon16.png", "48": "icons/icon48.png", "128": "icons/icon128.png" }
+}
